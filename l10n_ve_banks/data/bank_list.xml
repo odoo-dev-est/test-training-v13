@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="l10n_ve_bank03" model="l10n.ve.banks">
+            <field name="bank_code">0102</field>
+            <field name="name">Banco de Venezuela S.A.C.A. Banco Universal</field>
+        </record>
+        <record id="l10n_ve_bank04" model="l10n.ve.banks">
+            <field name="bank_code">0102</field>
+            <field name="name">Venezolano de Crédito, S.A. Banco Universal</field>
+        </record>
+        <record id="l10n_ve_bank04" model="l10n.ve.banks">
+            <field name="bank_code">0104</field>
+            <field name="name">Venezolano de Crédito, S.A. Banco Universal</field>
+        </record>
+        <record id="l10n_ve_bank05" model="l10n.ve.banks">
+            <field name="bank_code">0105</field>
+            <field name="name">Banco Mercantil, C.A S.A.C.A. Banco Universal</field>
+        </record>
+        <record id="l10n_ve_bank06" model="l10n.ve.banks">
+            <field name="bank_code">0108</field>
+            <field name="name">Banco Provincial, S.A. Banco Universal</field>
+        </record>
+        <record id="l10n_ve_bank07" model="l10n.ve.banks">
+            <field name="bank_code">0114</field>
+            <field name="name">Bancaribe C.A. Banco Universal</field>
+        </record>
+        <record id="l10n_ve_bank09" model="l10n.ve.banks">
+            <field name="bank_code">0115</field>
+            <field name="name">Banco Exterior C.A. Banco Universal</field>
+        </record>
+        <record id="l10n_ve_bank09" model="l10n.ve.banks">
+            <field name="bank_code">0116</field>
+            <field name="name">Banco Occidental de Descuento, Banco Universal C.A.</field>
+        </record>
+        <record id="l10n_ve_bank10" model="l10n.ve.banks">
+            <field name="bank_code">0128</field>
+            <field name="name">Banco Caroní C.A. Banco Universal</field>
+        </record>
+        <record id="l10n_ve_bank11" model="l10n.ve.banks">
+            <field name="bank_code">0134</field>
+            <field name="name">Banesco Banco Universal S.A.C.A.</field>
+        </record>
+        <record id="l10n_ve_bank12" model="l10n.ve.banks">
+            <field name="bank_code">0137</field>
+            <field name="name">Banco Sofitasa Banco Universal</field>
+        </record>
+        <record id="l10n_ve_bank14" model="l10n.ve.banks">
+            <field name="bank_code">0138</field>
+            <field name="name">Banco Plaza Banco Universal</field>
+        </record>
+        <record id="l10n_ve_bank15" model="l10n.ve.banks">
+            <field name="bank_code">0146</field>
+            <field name="name">Banco de la Gente Emprendedora C.A.</field>
+        </record>
+        <!--record id="l10n_ve_bank16" model="l10n.ve.banks">
+            <field name="bank_code">0149</field>
+            <field name="name">Banco del Pueblo Soberano, C.A. Banco de Desarrollo</field>
+        </record-->
+        <record id="l10n_ve_bank17" model="l10n.ve.banks">
+            <field name="bank_code">0151</field>
+            <field name="name">BFC Banco Fondo Común C.A Banco Universal</field>
+        </record>
+        <record id="l10n_ve_bank18" model="l10n.ve.banks">
+            <field name="bank_code">0156</field>
+            <field name="name">100% Banco, Banco Universal C.A.</field>
+        </record>
+        <record id="l10n_ve_bank19" model="l10n.ve.banks">
+            <field name="bank_code">0157</field>
+            <field name="name">Del Sur Banco Universal, C.A.</field>
+        </record>
+        <record id="l10n_ve_bank20" model="l10n.ve.banks">
+            <field name="bank_code">0163</field>
+            <field name="name">Banco del Tesoro, C.A. Banco Universal</field>
+        </record>
+        <!--record id="l10n_ve_bank21" model="l10n.ve.banks">
+            <field name="bank_code">0164</field>
+            <field name="name">BANCO DE DESARROLLO DEL MICROEMPRESARIO</field>
+        </record-->
+        <record id="l10n_ve_bank22" model="l10n.ve.banks">
+            <field name="bank_code">0166</field>
+            <field name="name">Banco Agrícola de Venezuela, C.A. Banco Universal</field>
+        </record>
+        <record id="l10n_ve_bank23" model="l10n.ve.banks">
+            <field name="bank_code">0168</field>
+            <field name="name">Bancrecer, S.A. Banco Microfinanciero</field>
+        </record>
+        <record id="l10n_ve_bank24" model="l10n.ve.banks">
+            <field name="bank_code">0169</field>
+            <field name="name">Mi Banco Banco Microfinanciero C.A.</field>
+        </record>
+        <record id="l10n_ve_bank25" model="l10n.ve.banks">
+            <field name="bank_code">0171</field>
+            <field name="name">Banco Activo, C.A. Banco Universal</field>
+        </record>
+        <record id="l10n_ve_bank26" model="l10n.ve.banks">
+            <field name="bank_code">0172</field>
+            <field name="name">Bancamiga Banco Microfinanciero C.A.</field>
+        </record>
+        <record id="l10n_ve_bank27" model="l10n.ve.banks">
+            <field name="bank_code">0173</field>
+            <field name="name">Banco Internacional de Desarrollo, C.A. Banco Universal</field>
+        </record>
+        <record id="l10n_ve_bank28" model="l10n.ve.banks">
+            <field name="bank_code">0174</field>
+            <field name="name">Banplus Banco Universal, C.A.</field>
+        </record>
+        <record id="l10n_ve_bank29" model="l10n.ve.banks">
+            <field name="bank_code">0175</field>
+            <field name="name">Banco Bicentenario Del Pueblo, De La Clase Obrera, Mujer Y Comunas, Banco Universal C.A.</field>
+        </record>
+        <!--record id="l10n_ve_bank30" model="l10n.ve.banks">
+            <field name="bank_code">0176</field>
+            <field name="name">Banco Espirito Santo, S.A. Sucursal Venezuela B.U.</field>
+        </record-->
+        <record id="l10n_ve_bank31" model="l10n.ve.banks">
+            <field name="bank_code">0177</field>
+            <field name="name">Banco de la Fuerza Armada Nacional Bolivariana, B.U.</field>
+        </record>
+        <record id="l10n_ve_bank32" model="l10n.ve.banks">
+            <field name="bank_code">0190</field>
+            <field name="name">Citibank N.A.</field>
+        </record>
+        <record id="l10n_ve_bank33" model="l10n.ve.banks">
+            <field name="bank_code">0191</field>
+            <field name="name">Banco Nacional de Crédito, C.A. Banco Universal</field>
+        </record>
+        <!--record id="l10n_ve_bank34" model="l10n.ve.banks">
+            <field name="bank_code">0196</field>
+            <field name="name">ABN AMRO BANK</field>
+        </record-->
+        <record id="l10n_ve_bank35" model="l10n.ve.banks">
+            <field name="bank_code">0601</field>
+            <field name="name">Instituto Municipal de Crédito Popular</field>
+        </record>
+    </data>
+</odoo>
