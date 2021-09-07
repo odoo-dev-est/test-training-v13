@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_submodules/moodle_odoo_int_submodules/moodle_odoo_int,submodules/moodle_odoo_int.submodules/moodle_odoo_int,model_submodules/moodle_odoo_int_submodules/moodle_odoo_int,base.group_user,1,1,1,1

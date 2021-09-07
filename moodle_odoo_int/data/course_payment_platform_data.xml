@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="cousre_payment_platform_001" model="course.payment.platform">
+            <field name="name">Paypal</field>
+            <field name="payment_code">paypal</field>
+        </record>
+        <record id="cousre_payment_platform_002" model="course.payment.platform">
+            <field name="name">BanplusPay (Bs)</field>
+            <field name="payment_code">banpluspayBS</field>
+        </record>
+        <record id="cousre_payment_platform_003" model="course.payment.platform">
+            <field name="name">BanplusPay (USD)</field>
+            <field name="payment_code">banpluspayUSD</field>
+        </record>
+        <record id="cousre_payment_platform_004" model="course.payment.platform">
+            <field name="name">Transferencia</field>
+            <field name="payment_code">bolivares</field>
+        </record>
+        <record id="cousre_payment_platform_005" model="course.payment.platform">
+            <field name="name">Pago Movil</field>
+            <field name="payment_code">pagomovil</field>
+        </record>
+        <record id="cousre_payment_platform_006" model="course.payment.platform">
+            <field name="name">Zelle</field>
+            <field name="payment_code">zelle</field>
+        </record>
+        <record id="cousre_payment_platform_007" model="course.payment.platform">
+            <field name="name">TDC Internacional</field>
+            <field name="payment_code">banitsmo</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="moodle_odoo_parameter_url" model="ir.config_parameter">
+            <field name="key">moodle_url</field>
+            <field name="value">https://devacademia.ciexpro.website/webservice/rest/server.php?</field>
+        </record>
+        <record id="moodle_odoo_parameter_token" model="ir.config_parameter">
+            <field name="key">moodle_token</field>
+            <field name="value">1659e88702efd3d648f635ab80d03806</field>
+        </record>
+        <record id="moodle_odoo_parameter_max_limit" model="ir.config_parameter">
+            <field name="key">max_limit_x_course</field>
+            <field name="value">50</field>
+        </record>
+    </data>
+</odoo>

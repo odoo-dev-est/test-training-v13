@@ -1,0 +1,75 @@
+<odoo>
+  <data>
+    <record id="view_op_student_tree" model="ir.ui.view">
+        <field name="name">op.student.tree.inherit</field>
+        <field name="model">op.student</field>
+        <field name="inherit_id" ref="openeducat_core.view_op_student_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='title']" position="replace">
+                <field name="title" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='blood_group']" position="replace">
+                <field name="blood_group" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='lang']" position="replace">
+                <field name="lang" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='emergency_contact']" position="replace">
+                <field name="emergency_contact" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="last_name"/>
+                <field name="full_course_name"/>
+                <field name="student_ci"/>
+                <field name="email"/>
+                <field name="referido_ciexpro"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="student_odoo_moodle_int_view" model="ir.ui.view">
+            <field name="name">student.odoo.moodle.int.view</field>
+            <field name="model">op.student</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_student_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='nationality']" position="after">
+                        <field name="student_id" readonly="True"/>
+                        <field name="student_rif" />
+                        <field name="reference_number" />
+                        <field name="payment_platform_m2o" />
+                        <field name="address" />
+                        <field name="course_name" />
+                        <field name="course_price" />
+                        <field name="nac_banks" />
+                        <field name="currency" />
+                </xpath>
+                 <xpath expr="//field[@name='city']" position="replace">                        
+                        <field name="city" placeholder="City" required="True" />
+                </xpath>
+                <xpath expr="//field[@name='country_id']" position="replace">
+                        <field name="country_id" placeholder="Country" required="True" />
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="after">
+                        <field name="moodle_usr_name"  readonly="True" />
+                </xpath>
+                <xpath expr="//button[@name='create_student_user']" position="after">
+                    <button name="action_send_email" string="Send by email" type="object"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="course_odoo_moodle_int_view" model="ir.ui.view">
+            <field name="name">course.odoo.moodle.int.view</field>
+            <field name="model">op.course</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_course_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='code']" position= "replace">
+                        <label for="code" string = "Nombre corto" />
+                        <field name="code" required = "True" nolabel = "1"/>
+                        <field name="course_id" readonly = "1" />
+                </xpath>                                
+            </field>
+        </record>
+
+  </data>
+</odoo>

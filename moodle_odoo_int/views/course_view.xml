@@ -1,0 +1,48 @@
+<odoo>
+    <data>
+        <!-- actions opening views on models -->
+
+        <record model="ir.actions.act_window" id="openeducat_courses_act_window">
+            <field name="name">Courses</field>
+            <field name="res_model">op.course</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create a new course for Academy
+                </p>
+            </field>
+        </record>
+
+        <!-- Top menu item -->
+        <menuitem name="Courses" id="openeducat_course_menu_root" groups="base.group_user"
+              web_icon="moodle_odoo_int,static/description/icon_courses.png"/>
+
+        <!-- menu categories -->
+
+        <menuitem name="Courses" id="courses_menu_1" parent="openeducat_course_menu_root"/>
+
+        <!-- actions -->
+
+        <menuitem name="List" id="banplus_payment_menu_1_list" parent="courses_menu_1"
+              action="openeducat_courses_act_window"/>
+
+        <record id="course_odoo_moodle_int_view" model="ir.ui.view">
+            <field name="name">course.odoo.moodle.int.view</field>
+            <field name="model">op.course</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_course_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='department_id']" position="before">
+                        <field name="start_date" />
+                </xpath>
+                <xpath expr="//field[@name='department_id']" position="after">
+                    <field name="end_date" />
+                    <field name="time_lapse"/>
+                </xpath>
+                <xpath expr="//group[@name='main']" position="after">
+                    <group colspan="4" name="description">
+                        <field name="course_description"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
