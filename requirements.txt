@@ -1,1 +1,2 @@
 sendgrid==6.8.1
+WooCommerce==3.0.0
