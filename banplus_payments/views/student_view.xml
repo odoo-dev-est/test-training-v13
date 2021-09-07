@@ -1,0 +1,15 @@
+<odoo>
+  <data>
+    <record id="student_payment_view" model="ir.ui.view">
+            <field name="name">student.payment.view</field>
+            <field name="model">op.student</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_student_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='image_1920']" position="before">
+                    <label for="is_valid" string="Verificado"></label>
+                    <field name="is_valid" />
+                </xpath>
+            </field>
+        </record>
+  </data>
+</odoo>

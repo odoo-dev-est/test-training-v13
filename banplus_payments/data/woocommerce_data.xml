@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="bp_pay_url_value" model="ir.config_parameter">
+            <field name="key">woo_url_key</field>
+            <field name="value">http://quality.ciexpro.com</field>
+        </record>
+        <record id="bp_pay_consumer_key_value" model="ir.config_parameter">
+            <field name="key">woo_consumer_key</field>
+            <field name="value">ck_cf505fb13ec845b59301a10fb8118d4484c027eb</field>
+        </record>
+        <record id="bp_pay_consumer_secret_value" model="ir.config_parameter">
+            <field name="key">woo_consumer_secret_key</field>
+            <field name="value">cs_e142141937062fda84686104450fa2a2b3ada711</field>
+        </record>
+        <record id="bp_pay_ver_value" model="ir.config_parameter">
+            <field name="key">woo_version_key</field>
+            <field name="value">wc/v3</field>
+        </record>
+        
+        <record id="ir_cron_auto_get_woocomerce_order" model="ir.cron">
+            <field name="name">Payments; Get order data from woocommerce Wordpress plugin</field>
+            <field name="interval_number">10</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="nextcall" eval="(DateTime.now().replace(hour=2, minute=0) + timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')" />
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="banplus_payments.model_banplus_payment"/>
+            <field name="code">model.get_woo_orders()</field>
+            <field name="state">code</field>
+            <field name="active" eval="False"/>
+        </record>
+        <record id="res_partner_web_client_user" model="res.partner">
+            <field name="name">web_client_user</field>
+        </record>
+        <record id="bp_pay_partner_value" model="ir.config_parameter">
+            <field name="key">bp_pay_partner_value</field>
+            <field name="value">web_client_user</field>
+        </record>
+    </data>
+</odoo>

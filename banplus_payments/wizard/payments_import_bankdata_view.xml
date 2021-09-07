@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+        <record id="payment_import_bankdata_wizard_form" model="ir.ui.view">
+            <field name="name">payment.import.bank.data.form</field>
+            <field name="model">payment.import.bank.data</field>
+            <field name="arch" type="xml">
+                <form string="Import File CSV">
+                    <field name="name"/>
+                    <field name="csv_file" string=" " filename="name"/>
+                    <separator string="Are you sure you want to do this?" colspan="4"/>
+                    <field name="sure"/>
+                    <footer>
+                        <button special="cancel" string="Cancel"  class="oe_highlight"/>
+                        <button name="import_file_csv" string="Process File" type="object" class="oe_highlight"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    <record id="action_payment_import_bankdata" model="ir.actions.act_window">
+            <field name="name">Import Banplus File</field>
+            <field name="res_model">payment.import.bank.data</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="payment_import_bankdata_wizard_form"/>
+            <field name="target">new</field>
+    </record>
+
+    <menuitem name="Import Banplus File" 
+        id="payment_import_bankdata_action_menu" 
+        parent="banplus_payments.banplus_payment_menu_1" 
+        action="action_payment_import_bankdata" />
+
+    </data>
+</odoo>

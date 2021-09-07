@@ -1,0 +1,117 @@
+<odoo>
+  <data>
+    <record id="validate_payment_action_banplus" model="ir.actions.server">
+      <field name="name">Validar Pagos</field>
+      <field name="model_id" ref="banplus_payments.model_banplus_payment"/>
+      <field name="binding_model_id" ref="banplus_payments.model_banplus_payment"/>
+      <field name="binding_view_types">list</field>
+      <field name="state">code</field>
+      <field name="code">action = records.payment_validate()</field>
+    </record>
+
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="banplus_payment_list">
+      <field name="name">banplus.payment.list</field>
+      <field name="model">banplus.payment</field>
+      <field name="arch" type="xml">
+        <tree multi_edit="1">
+          <field name="student_id"/>
+          <field name="full_course_name"/>
+          <field name="payment_platform_m2o"/>
+          <field name="owner_name" />
+          <field name="owner_ci" />
+          <field name="origin_bank"/>
+          <field name="nac_banks"/>
+          <field name="amount"/>
+          <field name="currency"/>
+          <field name="price_in_bs"/>
+          <field name="reference_number"/>
+          <field name="status"/>
+          <field name="is_valid"/>
+          <field name="validation_date" readonly="1"/>
+          <field name="moodle"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="banplus_paymets_view_form" model="ir.ui.view">
+      <field name="name">banplus.paymets.view.form</field>
+      <field name="model">banplus.payment</field>
+      <field name="arch" type="xml">
+        <form string="Payments">
+          <sheet>
+            <group>
+              <group>
+                <field name="student_id" required="1" />
+                <field name="full_course_name" required="1" />
+                <field name="payment_platform_m2o" required="1" />
+                <field name="origin_bank" required="1" />
+                <field name="nac_banks" required="1" />
+                <field name="amount" required="1" />
+                <field name="currency" />
+                <field name="price_in_bs" required="1" />
+              </group>
+              <group>
+                <field name="reference_number" />
+                <field name="owner_name" />
+                <field name="owner_ci" />
+                <field name="status" />
+                <field name="is_valid" />
+                <field name="date_time" readonly="1"/>
+                <field name="moodle"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="banplus_payment_act_window">
+      <field name="name">Payments</field>
+      <field name="res_model">banplus.payment</field>
+      <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Add payment records for validate and process
+                </p>
+            </field>
+    </record>
+
+    <!-- server action to the one above -->
+
+    <record model="ir.actions.server" id="banplus_payment_action_server">
+      <field name="name">banplus_payment_action_server</field>
+      <field name="model_id" ref="banplus_payments.model_banplus_payment"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+
+
+    <!-- Top menu item -->
+
+    <menuitem name="Payments" id="banplus_payment_menu_root" groups="base.group_user"
+              web_icon="banplus_payments,static/description/icono-banplus.png"/>
+
+
+    <!-- menu categories -->
+
+    <menuitem name="Clientes" id="banplus_payment_menu_1" parent="banplus_payment_menu_root"/>
+    <!-- <menuitem name="Menu 2" id="banplus.payment.menu_2" parent="banplus_payment.menu_root"/> -->
+
+    <!-- actions -->
+
+    <menuitem name="List" id="banplus_payment_menu_1_list" parent="banplus_payment_menu_1"
+              action="banplus_payment_act_window"/>
+    <!--menuitem name="Server to list" id="banplus.payment" parent="banplus.payment.menu_2"
+              action="banplus.payment.action_server"/-->
+
+  </data>
+</odoo>
