@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+        <template id="main_bar_color" inherit_id="web.webclient_bootstrap" name="custom_menu_bar">
+          <xpath expr="." position="inside">
+            <link rel="stylesheet" href="cx_change_theme_color/static/src/scss/style.scss"/>
+          </xpath>
+        </template>
+    </data>
+</odoo>
