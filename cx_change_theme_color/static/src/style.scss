@@ -2,14 +2,14 @@ $other-primary: #11803f;
 $o-community-color: #11803f;
 $o-enterprise-color: #11803f;
 
-.o_main_navbar {
-    background-color : $other-primary;
-}
+//.o_main_navbar {
+//    background-color : $other-primary;
+//}
 
-$other-primary-dark: darken($other-primary, 10%);
-.o_main_navbar > a:hover, .o_main_navbar > a:focus, .o_main_navbar > button:hover, .o_main_navbar > button:focus {
+//$other-primary-dark: darken($other-primary, 10%);
+//.o_main_navbar > a:hover, .o_main_navbar > a:focus, .o_main_navbar > button:hover, .o_main_navbar > button:focus //{
 
-    background-color: $other-primary-dark;
-    color: inherit;
+//    background-color: $other-primary-dark;
+//    color: inherit;
 
-}
+//}
